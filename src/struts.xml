@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+	
+		<action name="home" class="com.paul.action.ListsAction">
+			<result>pages/index.jsp</result>
+		</action>
+		<action name="create">
+			<result>pages/new.jsp</result>
+		</action>
+		<action name="update">
+			<result>pages/update.jsp</result>
+		</action>
+		<action name="list">
+			<result>pages/comment.jsp</result>
+		</action>
+		<action name="New" class="com.paul.action.NewAction">
+			<result name="success" type="redirect">home</result>
+		</action>
+		<action name="Update" class="com.paul.action.UpdateAction">
+			<result name="success" type="redirect">home</result>
+		</action>
+		<action name="delete" class="com.paul.action.DeleteAction">
+			<result name="success" type="redirect">home</result>
+		</action>
+	</package>
+</struts>
